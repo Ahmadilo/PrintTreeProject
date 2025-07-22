@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Parsers\ArgsParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -51,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\" />
-    <Folder Include="Parsers\" />
     <Folder Include="Routes\" />
     <Folder Include="storing\" />
   </ItemGroup>
