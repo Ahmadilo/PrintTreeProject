@@ -12,6 +12,9 @@ namespace PrintTreeProject.Parsers
         {
             var options = new Dictionary<string, string>();
 
+            if(args.Length == 0)
+                return options;
+
             for (int i = 0; i < args.Length; i++)
             {
                 string arg = args[i];
@@ -19,6 +22,12 @@ namespace PrintTreeProject.Parsers
                 // إذا الخيار يبدأ بـ "-" أو "--"
                 if (arg.StartsWith("-"))
                 {
+                    // إزالة "-" أو "--" من بداية الخيار
+                    if (arg.StartsWith("--"))
+                        arg = arg.Substring(2);
+                    else if (arg.StartsWith("-"))
+                        arg = arg.Substring(1);
+
                     // هل له قيمة تالية؟ (وليست خيارًا جديدًا)
                     if (i + 1 < args.Length && !args[i + 1].StartsWith("-"))
                     {

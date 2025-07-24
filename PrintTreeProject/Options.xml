@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Options>
+	<Option Name="show" Short="s" />
+
+	<!-- مسار مجلد -->
+	<Option Name="directory" Short="d" regex="^([a-zA-Z]:)?(\\[a-zA-Z0-9 _-]+)+\\?$" />
+
+	<!-- مسار ملف -->
+	<Option Name="file" Short="f" regex="^([a-zA-Z]:)?(\\[a-zA-Z0-9 _-]+)+\.[a-zA-Z0-9]+$" />
+
+	<!-- تشغيل git أو تفعيله، لا يحتاج قيمة -->
+	<Option Name="git" Short="g" />
+
+	<!-- عرض المساعدة -->
+	<Option Name="help" Short="h" />
+
+	<!-- عرض النسخة -->
+	<Option Name="version" Short="v" />
+
+	<!-- اسم ملف الإخراج مع الامتداد -->
+	<Option Name="output" Short="o" regex="^[\w,\s-]+\.(txt|log|json)$" />
+</Options>
+

@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Parsers\ArgsParser.cs" />
+    <Compile Include="Parsers\ValidtionParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -54,6 +55,9 @@
     <Folder Include="Core\" />
     <Folder Include="Routes\" />
     <Folder Include="storing\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Options.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
