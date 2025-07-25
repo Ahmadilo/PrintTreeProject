@@ -10,12 +10,9 @@ namespace PrintTreeProject
     {
         static void Main(string[] args)
         {
-            Dictionary<string, string> options = Parsers.ArgsParser.Parse(args);
-
-            if(Parsers.ValidtionParser.IsValid(options))
-            {
-                Console.WriteLine("Hello World");
-            }
+            Cls.Input(args);
+            Cls.Process();
+            Cls.Output();
         }
     }
 }

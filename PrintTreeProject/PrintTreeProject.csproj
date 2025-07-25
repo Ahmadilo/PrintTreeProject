@@ -43,17 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cls.cs" />
     <Compile Include="Parsers\ArgsParser.cs" />
     <Compile Include="Parsers\ValidtionParser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Routes\handler.cs" />
+    <Compile Include="Routes\Route.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Core\" />
-    <Folder Include="Routes\" />
     <Folder Include="storing\" />
   </ItemGroup>
   <ItemGroup>
