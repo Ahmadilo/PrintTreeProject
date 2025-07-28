@@ -9,18 +9,32 @@ namespace PrintTreeProject.Routes
 {
     internal class Route
     {
-        private static bool isFormat(string Format)
+        private static bool isFormat(string format)
         {
+            if(format == "")
+                return true;
+
+            var required = format.Split(',');
+
+            if (required.Length != Cls.Option.Count)
+                return false;
+
+            foreach (var key in required)
+            {
+                if (!Cls.Option.ContainsKey(key) && !Cls.Option.ContainsKey(key[0].ToString()))
+                    return false;
+            }
+
             return true;
         }
 
-        public static void Process(string Format, Action<object> action, bool Order = false)
+
+        public static void Process(string Format, Action action, bool Order = false)
         {
             bool isthis = Route.isFormat(Format);
-            object result = null;
 
             if (isthis)
-                action?.Invoke(result);
+                action?.Invoke();
         }
     }
 }

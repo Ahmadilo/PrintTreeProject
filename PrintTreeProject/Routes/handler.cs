@@ -10,7 +10,9 @@ namespace PrintTreeProject.Routes
     {
         public static void handle()
         {
-            Route.Process(Format: "s", action: (s) => Cls.Result = "Heloo World");
+            Route.Process(Format: "", action: () => Cls.Result = "Hello World");
+
+            Route.Process(Format: "show", action: () => Cls.Result = "Heloo World");
         }
     }
 }
