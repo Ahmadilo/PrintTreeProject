@@ -11,10 +11,28 @@ namespace PrintTreeProject.Routes
     {
         private static bool isFormat(string format)
         {
-            if(format == "")
+            if(format == "" && (Cls.Option == null || Cls.Option.Count == 0))
                 return true;
+            string[] required = null;
+            if (format.Contains(","))
+            {
+                required = format.Split(',');
 
-            var required = format.Split(',');
+            }
+            else
+            {
+                if (Cls.Option.Count != 1)
+                    return false;
+
+                if (format == "")
+                    return false;
+
+                if (!Cls.Option.ContainsKey(format) && !Cls.Option.ContainsKey(format[0].ToString()))
+                    return false;
+
+                return true;
+            }
+
 
             if (required.Length != Cls.Option.Count)
                 return false;

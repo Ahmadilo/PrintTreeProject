@@ -10,6 +10,7 @@ namespace PrintTreeProject
     {
         static void Main(string[] args)
         {
+            args = new string[] { "--show" };
             Cls.Input(args);
             Cls.Process();
             Cls.Output();

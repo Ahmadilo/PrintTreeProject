@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PrintTreeProject.Core.Controllers;
 
 namespace PrintTreeProject.Routes
 {
@@ -10,9 +11,9 @@ namespace PrintTreeProject.Routes
     {
         public static void handle()
         {
-            Route.Process(Format: "", action: () => Cls.Result = "Hello World");
+            Route.Process(Format: "", action: () => { FileController.PrintFilesTree(); });
 
-            Route.Process(Format: "show", action: () => Cls.Result = "Heloo World");
+            Route.Process(Format: "show", action: () => { FileController.PrintFilesTree(); });
         }
     }
 }
